@@ -9,14 +9,15 @@
       <h1 style="text-align:center;">Soutěž sportovní všestrannosti Praha 2026 – přihlášky</h1>
       <h2 style="text-align:center;">17.–19. 4. 2026</h2>
       <h3 style="text-align:center;">V případě problémů pište na <span style="color:blue;">ematouskova@sokol.eu</span></h3>
+      <div id="tabulka">
       <fieldset>
-        <legend>Informace před přihlášením</legend>
+        <legend style="font-size: 20"><b>Informace před přihlášením</b></legend>
         <ul>
             <li>Nejprve vyberte župu a poté jednotu, následně se vám otevře tabulka pro přihlášení závodníků</li>
             <li>Pro každou jednotu je jedna tabulka</li>
             <li>Psát můžete pouze do modře podbarvených buněk</li>
             <li>V tabulce nejprve vyplňte kontaktní údaje na vyplňujícího</li>
-            <li>Následně vyplňte:</li>
+            <li>Následně pro každého závodníka vyplňte:</li>
             <ul>
                 <li>Příjmení a jméno závodníka</li>
                 <li>Členské ID závodníka</li>
@@ -25,13 +26,14 @@
                 <li>Zaškrtněte, kterých disciplín se závodník zúčastní</li>
                 <li>Libovolně poznámku – např. plavec v krajní dráze, ostaršení apod.</li>
             </ul>
-            <li>K přihlášce se můžete do 2. 4. 2026 kdykoli vrátit</li>
-            <li>Po ukončení přihlašování závodníků vám pošleme <b>přihlašovací formulář pro rozhodčí pro vyplnění do 6. 4. 2026</b></li>
+            <li>Pro jednodušší vyplňování závodníků doporučuji přesouvání pomocí šipek či posouvat vnitřním posuvníkem vedle tabulky (nikoli posuvníkem pro celou stránku)</li>
+            <li>K přihlášce se můžete kdykoli vrátit (před uzavřením přihlašování)</li>
+            <li>Po ukončení přihlašování závodníků vám pošleme <b>přihlašovací formulář pro rozhodčí</b></li>
         </ul>
       </fieldset> 
       <h1 style="text-align:center;color:red;">Přihlašování bude spuštěno 24. 3. 2026</h1>
       <fieldset>
-            <legend>Výběr župy a jednoty</legend> 
+            <legend style="font-size: 20"><b>Výběr župy a jednoty</b></legend> 
             <table border="0">
                 <tbody><tr><td>Vyber župu</td><td></td></tr>
                 <tr><td><select name="VDzupa" id="VDzupa" onchange="addJednota()" required="">
@@ -46,10 +48,7 @@
                 </tbody>
             </table>
       </fieldset> 
-      <fieldset>
-            <legend>Přihlášení závodníků</legend> 
-            <div id="tabulka"></div>
-      </fieldset> 
+      </div>
       <h3 style="text-align:center;"> Pražské sokolské župy</h3>
       <h4 style="text-align:center;">Újezd 450, Praha 1, 118 01<br><span style="color:blue;">prsoz@sokol.eu</span></h4>  
       
@@ -72,7 +71,7 @@
           var jednota = document.getElementById("VDjednota").value;
           var tabulka = document.getElementById("tabulka");
           if (jednota == "Praha Královské Vinohrady"){
-              tabulka.innerHTML = '<iframe src="https://docs.google.com/spreadsheets/d/15suK-ZZWMsUkz9qrHg4pa3bphg_25FvzhSCenF7g1Dg/edit?usp=sharing;gid=451822085&amp;single=true&amp;widget=true&amp;headers=false;chrome=false" width="100%" height="2000px"></iframe>';
+              tabulka.innerHTML = '<iframe width="100%" height="100%" src="https://docs.google.com/spreadsheets/d/15suK-ZZWMsUkz9qrHg4pa3bphg_25FvzhSCenF7g1Dg/edit?usp=sharing;gid=451822085&amp;single=true&amp;widget=true&amp;headers=false;chrome=false&rm=minimal"></iframe>';
           }
         }  
         
