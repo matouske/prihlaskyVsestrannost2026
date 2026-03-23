@@ -3,13 +3,84 @@
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="generator" content="PSPad editor, www.pspad.com">
-  <title>Prihlasky SV2026</title>
+  <title>Přihlášky SV 2026</title>
   </head>
   <body>
-    <h1>Soutěž ve sportovní všestrannosti 2026</h1>
-    <h2>17.–19. 4. 2026</h2>h2>
-    <div id="prihlasky">
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6lE4sHYMc6E7wnZvE1XRbMKoCsZvHBmJc8RFu4X-MNl_c2pJXKVQGOFyCOk_dJtVUWZmyYTjVR0XM/pubhtml?widget=true&amp;headers=false" width="1500px" height="2000px"></iframe>
-    </div>
+      <h1 style="text-align:center;">Soutěž sportovní všestrannosti Praha 2026 – přihlášky</h1>
+      <h2 style="text-align:center;">17.–19. 4. 2026</h2>
+      <h3 style="text-align:center;">V případě problémů pište na <span style="color:blue;">ematouskova@sokol.eu</span></h3>
+      <fieldset>
+        <legend>Informace před přihlášením</legend>
+        <ul>
+            <li>Nejprve vyberte župu a poté jednotu, následně se vám otevře tabulka pro přihlášení závodníků</li>
+            <li>Pro každou jednotu je jedna tabulka</li>
+            <li>Psát můžete pouze do modře podbarvených buněk</li>
+            <li>V tabulce nejprve vyplňte kontaktní údaje na vyplňujícího</li>
+            <li>Následně vyplňte:</li>
+            <ul>
+                <li>Příjmení a jméno závodníka</li>
+                <li>Členské ID závodníka</li>
+                <li>Rok narození</li>
+                <li>U kategorie vyberte kategorii z nabídky</li>
+                <li>Zaškrtněte, kterých disciplín se závodník zúčastní</li>
+                <li>Libovolně poznámku – např. plavec v krajní dráze, ostaršení apod.</li>
+            </ul>
+            <li>K přihlášce se můžete kdykoli vrátit</li>
+            <li>Po ukončení přihlašování závodníků vám pošleme přihlašovací formulář pro rozhodčí</li>
+        </ul>
+      </fieldset> 
+      
+      <fieldset>
+            <legend>Výběr župy a jednoty</legend> 
+            <table border="0">
+                <tbody><tr><td>Vyber župu</td><td></td></tr>
+                <tr><td><select name="VDzupa" id="VDzupa" onchange="addJednota()" required="">
+                  <option id="zupaDISABLE" disabled="">---vyber---</option>
+                  <option>01 - Jana Podlipného</option>
+                  <option>03 - Podbělohorská</option>
+                  <option>05 - Pražská – Scheinerova</option>
+                  <option>99 - hosté</option>
+                </select></td><td></td></tr>
+                <tr><td>Vyber jednotu</td></tr>
+                <tr><td><select name="VDjednota" id="VDjednota" onchange="showBlock()" required=""></select></td></tr>
+                </tbody>
+            </table>
+      </fieldset> 
+      <fieldset>
+            <legend>Přihlášení závodníků</legend> 
+      </fieldset> 
+      <h3 style="text-align:center;"> Pražské sokolské župy</h3>
+      <h4 style="text-align:center;">Újezd 450, Praha 1, 118 01<br><span style="color:blue;">prsoz@sokol.eu</span></h4>  
+      
+      <script>
+      function addJednota(){
+          var zupa = document.getElementById("VDzupa").value;
+          var jednota = document.getElementById("VDjednota");
+          if (zupa == "01 - Jana Podlipného"){
+              jednota.innerHTML = "<option>---vyber---</option><option>Čakovice</option><option>Dolní Chabry</option><option>Dubeč</option><option>Hloubětín</option><option>Hostivař</option><option>Karlín</option><option>Kbely</option><option>Kobylisy II</option><option>Libeň</option><option>Libuš</option><option>Praha Královské Vinohrady</option><option>Praha Staré Město</option><option>Praha Vršovice</option><option>Prosek</option><option>Satalice</option><option>Štěrboholy</option><option>Vinoř</option><option>Vysočany</option><option>Žižkov II</option>";   
+          } else if (zupa == "03 - Podbělohorská"){
+              jednota.innerHTML = "<option>---vyber---</option><option>Bílá Hora</option><option>Bubeneč</option><option>Čimice</option><option>Hlubočepy</option><option>Chuchle</option><option>Kampa</option><option>Malá Strana</option><option>Nebušice</option><option>Praha VII</option><option>Praha - Břevnov</option><option>Praha Dejvice I</option><option>Praha - Hanspaulka</option><option>Praha Košíře</option><option>Praha Střešovice</option><option>Řeporyje</option><option>Suchdol - Sedlec</option><option>Troja</option>";
+          } else if (zupa == "05 - Pražská – Scheinerova"){
+              jednota.innerHTML = "<option>---vyber---</option><option>Braník I</option><option>Háje</option><option>Hodkovičky</option><option>Kunratice</option><option>Lhotka</option><option>Michle</option><option>Modřany</option><option>Nusle Praha</option><option>Pankrác</option><option>Petrovice I</option><option>Praha - Podolí</option><option>Praha Vršovice II</option><option>Praha Záběhlice</option><option>Pražský</option><option>Radotín</option><option>Smíchov II</option><option>Spořilov</option><option>Vyšehrad</option><option>Zbraslav</option><option>Zlíchov</option><option>Žižkov I</option>";
+          } else {
+              jednota.innerHTML = "<option>Zadejte v tabulce</option>";
+          }
+          document.getElementById("zupaDISABLE").disabled = "disabled";
+        }
+      function addJednota(){
+          var jednota = document.getElementById("VDjednota").value;
+          if (jednota == "Praha Královské Vinohrady"){
+              jednota.innerHTML = '<iframe src="https://docs.google.com/spreadsheets/d/15suK-ZZWMsUkz9qrHg4pa3bphg_25FvzhSCenF7g1Dg/edit?usp=sharing;gid=451822085&amp;single=true&amp;widget=true&amp;headers=false;chrome=false" width="100%" height="2000px"></iframe>';
+          }
+          document.getElementById("zupaDISABLE").disabled = "disabled";
+        }  
+        
+      
+      </script>
+    
+
+  
+
+      
   </body>
 </html>
