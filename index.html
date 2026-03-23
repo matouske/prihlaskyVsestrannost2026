@@ -25,17 +25,17 @@
                 <li>Zaškrtněte, kterých disciplín se závodník zúčastní</li>
                 <li>Libovolně poznámku – např. plavec v krajní dráze, ostaršení apod.</li>
             </ul>
-            <li>K přihlášce se můžete kdykoli vrátit</li>
-            <li>Po ukončení přihlašování závodníků vám pošleme přihlašovací formulář pro rozhodčí</li>
+            <li>K přihlášce se můžete do 2. 4. 2026 kdykoli vrátit</li>
+            <li>Po ukončení přihlašování závodníků vám pošleme <b>přihlašovací formulář pro rozhodčí pro vyplnění do 6. 4. 2026</b></li>
         </ul>
       </fieldset> 
-      
+      <h1 style="text-align:center;color:red;">Přihlašování bude spuštěno 24. 3. 2026</h1>
       <fieldset>
             <legend>Výběr župy a jednoty</legend> 
             <table border="0">
                 <tbody><tr><td>Vyber župu</td><td></td></tr>
                 <tr><td><select name="VDzupa" id="VDzupa" onchange="addJednota()" required="">
-                  <option id="zupaDISABLE" disabled="">---vyber---</option>
+                  <option id="zupaDISABLE">---vyber---</option>
                   <option>01 - Jana Podlipného</option>
                   <option>03 - Podbělohorská</option>
                   <option>05 - Pražská – Scheinerova</option>
@@ -48,6 +48,7 @@
       </fieldset> 
       <fieldset>
             <legend>Přihlášení závodníků</legend> 
+            <div id="tabulka"></div>
       </fieldset> 
       <h3 style="text-align:center;"> Pražské sokolské župy</h3>
       <h4 style="text-align:center;">Újezd 450, Praha 1, 118 01<br><span style="color:blue;">prsoz@sokol.eu</span></h4>  
@@ -67,12 +68,12 @@
           }
           document.getElementById("zupaDISABLE").disabled = "disabled";
         }
-      function addJednota(){
+      function showBlock(){
           var jednota = document.getElementById("VDjednota").value;
+          var tabulka = document.getElementById("tabulka");
           if (jednota == "Praha Královské Vinohrady"){
-              jednota.innerHTML = '<iframe src="https://docs.google.com/spreadsheets/d/15suK-ZZWMsUkz9qrHg4pa3bphg_25FvzhSCenF7g1Dg/edit?usp=sharing;gid=451822085&amp;single=true&amp;widget=true&amp;headers=false;chrome=false" width="100%" height="2000px"></iframe>';
+              tabulka.innerHTML = '<iframe src="https://docs.google.com/spreadsheets/d/15suK-ZZWMsUkz9qrHg4pa3bphg_25FvzhSCenF7g1Dg/edit?usp=sharing;gid=451822085&amp;single=true&amp;widget=true&amp;headers=false;chrome=false" width="100%" height="2000px"></iframe>';
           }
-          document.getElementById("zupaDISABLE").disabled = "disabled";
         }  
         
       
