@@ -1,1 +1,1 @@
-# prihloaskyVsestrannost2026
+# prihlaskyVsestrannost2026
